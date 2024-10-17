@@ -1,0 +1,373 @@
+.topbox{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9dvh;
+    border-bottom: 1px solid #15a775;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    transition: top 0.4s;
+    z-index: 1000;
+  }
+  
+  .logo{
+    width: 230px;
+  }
+  
+  .logo img{
+    width: 50%;
+    padding: 3% 58%;
+    position: relative;
+  }
+  
+  .logmsg{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #gnb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 9vh;
+    margin: 0 auto;
+    transition: top 0.4s;
+  }
+  
+  
+  .top-gnb{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+    height: 100%;
+    width: 50%;
+
+  }
+  
+  .top-gnb >li{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+  }
+  
+  .top-gnb > li > a{
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  
+  #gnb .top-gnb> li:hover .bt-gnb {
+    display: block;
+  }
+  #gnb .top-gnb> li:hover .bt-gnb>li{
+    text-align: center;
+  }
+  
+  .bt-gnb{
+    display: none;
+    position: absolute;
+    border: 1px solid #15a775;
+    border-radius: 0 0 8% 8%;
+    background-color: #fff;
+    top: 99%;
+    left: 0%;
+    width: 88%;
+    height: 100%;
+    z-index: 1001;
+    line-height: 2.4;
+  }
+  
+  .bt-gnb > li >a:hover{
+    color: #15a775;
+  }
+  
+  .bt-gnb > li > a{
+    color: rgb(156, 155, 155);
+  }
+  
+  .top-gnb > li:first-child::after{
+    content: "";
+    display: inline-block;
+    background:url(../../public/image/ic_star.png) no-repeat center;
+    width: 14%;
+    height: 100%;
+  }
+  
+  .top-gnb > li:nth-child(1) ~ li:nth-child(-n+4)::after{
+    content: "";
+    background:url(../../public/image/ic_star.png) no-repeat center;
+    display: inline-block;
+    width: 14%;
+    height: 100%;
+  }
+
+  /****************  햄버거 버튼영역 ****************/
+  .ham{
+    position: absolute;
+    // top: 5px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    color: #15a775;
+    transform: scaleX(1.5);
+    display: none;
+    z-index: 1;
+  }
+
+  .ham::before {
+    content: '≡';
+  }
+
+  .hbox{
+    position: fixed;
+    top: 0%;
+    left: 100%;
+    width: 100vw;
+    height: 100dvh;
+    z-index: 999999;
+    background-color: #fff;
+    transition: left .4s ease-in-out;
+  }
+  .htit{
+    position: absolute;
+    top: 9%;
+    left: 14%;
+    font-size: min(6.5vw, 40px);
+    // top: 50%;
+    // left: 50%;
+    // translate: -50% -50%;
+  }
+  .htit > li{
+    border-bottom: 1px solid #e5e5e5;
+    width: 188%;
+    padding: 9%;
+  }
+  .htit > li:last-child{
+    border-bottom: none;
+  }
+
+  .htit > li:first-child::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 4%;
+    left: -16%;
+    width: 20%;
+    height: 6%;
+    background: url(../../public/image/ic_star.png)no-repeat center;
+  }
+  .htit > li:nth-child(2)::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 19%;
+    left: -16%;
+    width: 20%;
+    height: 6%;
+    background: url(../../public/image/ic_star.png)no-repeat center;
+  }
+  .htit > li:nth-child(3)::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 34%;
+    left: -16%;
+    width: 20%;
+    height: 6%;
+    background: url(../../public/image/ic_star.png)no-repeat center;
+  }
+  .htit > li:nth-child(4)::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 62%;
+    left: -16%;
+    width: 20%;
+    height: 6%;
+    background: url(../../public/image/ic_star.png)no-repeat center;
+  }
+  .htit > li:last-child::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 89%;
+    left: -16%;
+    width: 20%;
+    height: 6%;
+    background: url(../../public/image/ic_star.png)no-repeat center;
+  }
+
+  .htit li{
+    cursor: pointer;
+    // text-align: center;
+    line-height: 2;
+  }
+ 
+  .htext >li {
+    font-size: 1.1rem;
+  }
+  .cbtn{
+    position: absolute;
+    top: 2vw;
+    right: 4vw;
+    font-size: 12vw;
+    color: #15a775;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 로그인 영역 */
+  .log{
+    display: flex;
+    position: relative;
+    width: 22%;
+    top: 37%;
+    right: 5%;
+  }
+  .log > ul{
+    display: flex;
+    gap: 10%;
+    width: 50%;
+    white-space: nowrap;
+  }
+
+  .log > ul > li:last-child{
+    margin-left: auto;
+    margin-right: 16px;
+  }
+  
+ /* gnb 검색입력창 박스 */
+.searchingGnb{    
+  position: absolute;
+  left: 114px;
+  top: -9px;
+  line-height: 41px;
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #efefef;
+  color:#15a775;
+  box-sizing: border-box;
+  padding: 0 5px;
+  display: none;
+}
+.searchingGnb input{
+  font-size: 0.9rem;
+  width: 73%;
+  margin-top: 5px;
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+input:focus{
+  outline: none;
+}
+.schbtnGnb{
+  cursor: pointer;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+.schhbtn{
+  margin-top: -17%;
+  margin-left: 90%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+/* 미디어쿼리 */
+@media screen and (max-width: 1470px) {
+  .logo{
+    width: 14.1%;
+  }
+  .top-gnb{
+    width: 75%;
+  }
+  .bt-gnb {
+    line-height: 2;
+  }
+  .log {
+    width: 31%;
+    right: 3%;
+  }
+  .searchingGnb {
+    left: 105px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .top-gnb{
+    display: none;
+  }
+  .ham {
+    display: block;
+  }
+  .logo img {
+    width: 100%;
+    padding: 10% 20%;
+  }
+  .searchingGnb {
+    left: 140px;
+  }
+  .searchingGnb input {
+    width: 80%;
+    margin-left: 5px;
+  }
+  .log {
+    right: 42%;
+   
+  }
+  .log > ul {
+    gap: 20%;
+    width: 100%;
+  }
+
+  .log > ul > li:last-child {
+   margin-left: 0;
+   margin-right: 0; 
+}
+  
+}
+@media screen and  (max-width:450px) {
+  
+.logo {	
+  position: static;
+   }
+
+.logo img{
+  padding: 4% 2%; 
+}
+
+#gnb{
+  width: 0%;
+}
+.log {
+  right: 51%;
+}
+.log > ul {
+  gap: 8%;
+}
+.searchingGnb {
+  left: 54px;
+  width: 230px;
+}
+
+.schhbtn{
+  margin-top: -18%;
+}
+
+}
