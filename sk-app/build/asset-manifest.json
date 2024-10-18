@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Semie-s-kitchen_pj/sk-app/static/css/main.5d07b61f.css",
-    "main.js": "/Semie-s-kitchen_pj/sk-app/static/js/main.dd29cf46.js",
-    "static/media/DoHyeon-Regular.woff": "/Semie-s-kitchen_pj/sk-app/static/media/DoHyeon-Regular.e6625971835bbc1bda75.woff",
-    "static/media/bg_pattern.png": "/Semie-s-kitchen_pj/sk-app/static/media/bg_pattern.d539959836c553884345.png",
-    "static/media/bg_pattern_pink.png": "/Semie-s-kitchen_pj/sk-app/static/media/bg_pattern_pink.596f89254b86afd6e134.png",
-    "static/media/bg_pattern_green.png": "/Semie-s-kitchen_pj/sk-app/static/media/bg_pattern_green.2f4434a6a410ff4f6589.png",
-    "static/media/mv_btns.png": "/Semie-s-kitchen_pj/sk-app/static/media/mv_btns.1eef2593b6cbc9dcfce2.png",
-    "static/media/samie7.png": "/Semie-s-kitchen_pj/sk-app/static/media/samie7.f6271870ca03e350765f.png",
-    "index.html": "/Semie-s-kitchen_pj/sk-app/index.html",
-    "main.5d07b61f.css.map": "/Semie-s-kitchen_pj/sk-app/static/css/main.5d07b61f.css.map",
-    "main.dd29cf46.js.map": "/Semie-s-kitchen_pj/sk-app/static/js/main.dd29cf46.js.map"
+    "main.css": "/Semie-s-kitchen_pj/static/css/main.72cfed8d.css",
+    "main.js": "/Semie-s-kitchen_pj/static/js/main.aebc2075.js",
+    "static/media/DoHyeon-Regular.woff": "/Semie-s-kitchen_pj/static/media/DoHyeon-Regular.e6625971835bbc1bda75.woff",
+    "static/media/bg_pattern.png": "/Semie-s-kitchen_pj/static/media/bg_pattern.d539959836c553884345.png",
+    "static/media/bg_pattern_pink.png": "/Semie-s-kitchen_pj/static/media/bg_pattern_pink.596f89254b86afd6e134.png",
+    "static/media/bg_pattern_green.png": "/Semie-s-kitchen_pj/static/media/bg_pattern_green.2f4434a6a410ff4f6589.png",
+    "static/media/mv_btns.png": "/Semie-s-kitchen_pj/static/media/mv_btns.1eef2593b6cbc9dcfce2.png",
+    "static/media/samie7.png": "/Semie-s-kitchen_pj/static/media/samie7.f6271870ca03e350765f.png",
+    "index.html": "/Semie-s-kitchen_pj/index.html",
+    "main.72cfed8d.css.map": "/Semie-s-kitchen_pj/static/css/main.72cfed8d.css.map",
+    "main.aebc2075.js.map": "/Semie-s-kitchen_pj/static/js/main.aebc2075.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d07b61f.css",
-    "static/js/main.dd29cf46.js"
+    "static/css/main.72cfed8d.css",
+    "static/js/main.aebc2075.js"
   ]
 }
