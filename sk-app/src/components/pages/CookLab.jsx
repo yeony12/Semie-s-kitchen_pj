@@ -43,7 +43,6 @@ export default function CookLab() {
               name="lsel"
               id="lsel"
               className="lsel"
-              // 값을 변경할 때 이벤트 발생
               onChange={(e) => {
                 // 정렬기준 상태변수 업데이트
                 setSort(e.target.value);
@@ -55,7 +54,6 @@ export default function CookLab() {
           </aside>
         </div>
         <div className="lab-mid">
-          {/* {viewList? <LabList viewDetail={setViewList} updateIdx={setIdx} selItem={selItem}/>:<LabDetail backList={setViewList} gNo={idx} selItem={selItem}/>} */}
           <ul>
             {recipeData.map((v, i) => (
               <li key={i}>

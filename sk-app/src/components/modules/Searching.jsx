@@ -52,7 +52,6 @@ function Searching({ kword }) {
     ) return true;
   }); ////// filter /////////////////
 
-  // [ 결과 내 재검색 : 데이터 항목 중 alignment값으로 검색함 ]
 
   // (1) 오름 차순일 경우
   if (sort == "asc") {
@@ -148,7 +147,6 @@ function Searching({ kword }) {
               name="sel"
               id="sel"
               className="sel"
-              // 값을 변경할 때 이벤트 발생
               onChange={(e) => {
                 console.log(e.target.value);
                 // 정렬기준 상태변수 업데이트
@@ -159,7 +157,6 @@ function Searching({ kword }) {
               <option value="desc">내림차순</option>
             </select>
           </aside>
-          {/* 2-3. 캐릭터 리스트 컴포넌트 : 데이터 상태변수 중 첫번째값만 보냄 */}
           <SearchingData dt={newList} />
         </div>
       </section>

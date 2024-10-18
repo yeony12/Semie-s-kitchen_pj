@@ -16,14 +16,14 @@
 import orgData from "../data/board.json";
 
 
-// [ 로컬쓰 클리어 ] /////////
+// [ 로컬스토리지 클리어 ] /////////
 const clearBoardData = () => {
     localStorage.removeItem("board-data");
   }; /////////// clearData //////////////
   
-  // [ 로컬쓰 초기체크셋팅! ] ////////////
+  // [ 로컬스토리지 초기체크셋팅 ] ////////////
   const initBoardData = () => {
-    // 만약 로컬스 "board-data"가 null이면 만들어준다!
+    
     if (localStorage.getItem("board-data") === null) {
       localStorage.setItem(
         "board-data", JSON.stringify(orgData)

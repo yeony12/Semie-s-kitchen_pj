@@ -169,14 +169,10 @@ function Login() {
         // -> 원래 비밀번호는 암호화되어 있으므로 백엔드 비밀번호 검사 모듈로 대부분 검사한다
         if (pwd === result.pwd){
             // 같을 경우 로그인 성공처리 
-            // alert("Login Success!");
 
 
             /********************** [로그인 후 세팅작업] **********************/
             // 1. 로그인한 회원정보를 세션스토리지에 세팅
-            // -> 서버 세션을 대신하여 사용함
-            // -> 결과가 result에 배열로 담김
-            // -> 넣을때는 JSON.stringify
             sessionStorage.setItem("minfo", JSON.stringify(result));
 
             // 2. 컨텍스트 API의 로그인상태 업데이트 
@@ -244,7 +240,6 @@ function Login() {
               <input id="user-id" type="text" maxLength="20" placeholder="아이디를 입력해주세요" value={userId} onChange={changeUserId} />
               {
               /* 에러일 경우 메시지 출력 */
-              // 조건문 && 출력요소
               userIdError  &&(
               <div className="msg">
                 <small style={{color:"red", fontSize:"11px"}}>{idMsg}</small>
@@ -262,7 +257,6 @@ function Login() {
               />
               {
               /* 에러일 경우 메시지 출력 */
-              // 조건문 && 출력요소
               pwdError  &&(
               <div className="msg">
                 <small style={{color:"red", fontSize:"11px"}}>{pwdMsg}</small>

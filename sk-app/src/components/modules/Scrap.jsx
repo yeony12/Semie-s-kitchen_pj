@@ -95,14 +95,6 @@ function Scrap(props) {
                             <td className="cnt-part">
                               <div>
                                 <span>
-                                  {/* <input
-                                    type="text"
-                                    className="item-cnt"
-                                    readOnly=""
-                                    defaultValue={v.cnt}
-                                    onBlur={() => {
-                                    }}
-                                  /> */}
                                   {/* 반영 버튼 */}
                                   <button
                                     className="btn-insert"
@@ -192,20 +184,7 @@ function Scrap(props) {
               </tr>
             </tbody>
             {/* 테이블 하단 영역 */}
-            <tfoot>
-              {/* <tr>
-                <td colSpan="6">총 개수 :</td>
-                <td>
-                  <span className="total-num"></span>개
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td colSpan="8" className="paging">
-                  {/* <button>Buy Now</button> */}
-                {/* </td>
-              </tr>  */}
-            </tfoot>
+            <tfoot></tfoot>
           </table>
         </section>
       </div>

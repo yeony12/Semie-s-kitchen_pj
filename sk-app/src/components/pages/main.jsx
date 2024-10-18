@@ -4,8 +4,6 @@ import React, { useLayoutEffect } from 'react';
 
 import "../../css/main.scss";
 
-import {headerdata} from "../data/headerarea";
-import headerFn from '../func/header';
 import SwiperLab from '../plugin/SwiperLab';
 import Cookpic from '../modules/Cookpic';
 import { Link } from 'react-router-dom';
@@ -15,7 +13,7 @@ import SwiperGuide from '../plugin/SwiperGuide';
 function Main(props) {
     
   useLayoutEffect(() => {
-    // headerFn(); 
+  
   }, []);
 
   

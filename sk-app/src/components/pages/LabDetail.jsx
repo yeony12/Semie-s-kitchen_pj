@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import "../../css/detail.scss";
-import $ from "jquery";
 import { dCon } from "../modules/dCon";
 
 import { useLocation } from "react-router-dom";
@@ -50,7 +49,6 @@ function LabDetail() {
             if (retSts) {
               // 메시지 보이기
               alert("이미 선택하신 상품입니다");
-              // 함수 나가기
               return;
             } ////// if //////////
             
@@ -80,7 +78,6 @@ function LabDetail() {
               left: "89%",
               color: "#15a775",
               fontSize: "40px",
-              // border: '1px solid #f5f5f5',
             }}
             icon={faBookmark}
           />

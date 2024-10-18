@@ -55,7 +55,7 @@ function Member() {
     // 입력된 값 읽기
     let val = e.target.value;
 
-    // 아이디 유효성 검사식(따옴표로 싸지 말것!)
+    // 아이디 유효성 검사식
     const valid = /^[A-Za-z0-9+]{5,}$/;
    
     // 에러상태 분기하기
@@ -106,29 +106,29 @@ function Member() {
     // 입력된 값 읽기
     let val = e.target.value;
 
-    // 비밀번호 유효성 검사식(따옴표로 싸지 말것!)
+    // 비밀번호 유효성 검사식
     const valid = /^.*(?=^.{5,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
 
     // 에러에 따른 상태값 변경
     if (valid.test(val)) setPwdError(false);
     else setPwdError(true);
 
-    // 기존입력값 반영하기
+    // 기존 입력 값 반영하기
     setPwd(val);
   }; ///////// changePwd 함수 //////////
 
 
 
-  //  비밀번호확인 유효성 검사 ///////////
+  //  비밀번호 확인 유효성 검사 ///////////
   const changeChkPwd = (e) => {
-    // 입력된 값읽기
+    // 입력된 값 읽기
     let val = e.target.value;
     
-    //  비밀번호 입력내용과 일치여부 확인
+    //  비밀번호 입력 내용과 일치 여부 확인
     if (pwd === val) setChkPwdError(false);
     else setChkPwdError(true);
 
-    //  기존입력값 반영하기
+    //  기존 입력값 반영하기
     setChkPwd(val);
   }; ///////// changeChkPwd 함수 //////////
 
@@ -154,7 +154,7 @@ function Member() {
     // 입력된 값읽기
     let val = e.target.value;
     
-    // 이메일 유효성 검사식(따옴표로 싸지 말것!)
+    // 이메일 유효성 검사식
     const valid =
       /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
 

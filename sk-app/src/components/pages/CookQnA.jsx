@@ -70,9 +70,6 @@ export default function CookQnA() {
     totalCount.current = orgData.length;
 
     // 2. 정렬 적용하기 : 내림차순
-    // orgData.sort((a, b) =>
-    //   Number(a.idx) > Number(b.idx) ? -1 : Number(a.idx) < Number(b.idx) ? 1 : 0
-    // );
 
     const chgVal = (x) =>
       sortCta == "idx"
@@ -182,7 +179,7 @@ export default function CookQnA() {
     setMode("L");
     // -> 삭제 후 첫페이지로 이동
     setPageNum(1);
-    //  } ////// if ///////
+ 
   }; //////// deleteFn /////////////////
 
   // 서브밋 처리함수
@@ -260,8 +257,7 @@ export default function CookQnA() {
       // (3) 새배열을 문자화하여 로컬스토리지에 넣기
       localStorage.setItem("board-data", JSON.stringify(locals));
 
-      // 4. 추가후 리스트 리랜더링시 리스트 불일치로 인한
-      // 에러를 방지하기 위하여 전체 개수를 바로 업데이트한다!
+      // 4. 추가후 리스트 리랜더링시 리스트 불일치로 인한 에러를 방지하기 위하여 전체 개수를 바로 업데이트
       totalCount.current = baseData.length;
 
       // [5]리스트로 돌아가기(리랜더링) -> 모드 변경 "L"
@@ -388,13 +384,9 @@ export default function CookQnA() {
                   // 2. 읽기 상태일 경우
                   <>
                     {mode == "R" && <button onClick={clickButton}>목록</button>}
-                    {/* { console.log("비교:",JSON.parse(sts).uid, "==?" , selRecord.current.uid)} */}
 
                     {
                       //로그인한 상태이고 글쓴이와 일치할 때 수정모드 이동 버튼이 노출됨
-                      // 현재글은 selRecord 참조변수에 저장됨
-                      // 글정보 항목 중 uid가 사용자 아이디임
-                      // 로그인 상태 정보하위의 sts.uid와 비교함
                       mode == "R" && sts && JSON.parse(sts).uid == selRecord.current.uid && (
                         <button onClick={clickButton}>수정</button>
                       )
@@ -605,8 +597,7 @@ const ReadMode = ({ selRecord, sts }) => {
   // (5) 다시 세션스토리지에 저장하기
   sessionStorage.setItem("bd-rec", JSON.stringify(rec));
 
-  // 3. 글번호 증가하기
-  // -> 게시판 원본 데이터에 조회수 업데이트하기
+  // 3. 글번호 증가하기(게시판 원본 데이터에 조회수 업데이트)
   if (!isRec) {
     // (1) 게시판 로컬스토리지 데이터 파싱
     let bdData = JSON.parse(localStorage.getItem("board-data"));
@@ -693,7 +684,6 @@ const ReadMode = ({ selRecord, sts }) => {
 const WriteMode = ({ sts, updateFileInfo }) => {
   // sts : 로그인 상태정보
   // 로그인한 사람만 글쓰기 가능
-  // console.log(sts);
 
   return (
     <>
@@ -753,7 +743,6 @@ const WriteMode = ({ sts, updateFileInfo }) => {
 **********************************************************/
 const ModifyMode = ({ selRecord }) => {
 
-  // console.log("전달된 참조변수:", selRecord.current);
   // 전달된 데이터 객체를 변수에 할당
   const data = selRecord.current;
 
@@ -816,8 +805,7 @@ const ModifyMode = ({ selRecord }) => {
 }; ////// ModifyMode //////////////////////////
 
 /********************************************************
-   *  PagingList : 페이징 기능 컴포넌트 
-  
+   *  PagingList : 페이징 기능 컴포넌트  
 ********************************************************/
 const PagingList = ({ totalCount, unitSize, pageNum, setPageNum, pgPgNum, pgPgSize }) => {
   /********************************************** 
@@ -829,7 +817,6 @@ const PagingList = ({ totalCount, unitSize, pageNum, setPageNum, pgPgNum, pgPgSi
   ***********************************************/
 
   // 전체 페이징 개수 : 전체레코드수 / 페이지당 개수
-  // 유의점 : 나머지가 있는지 검사해서 있으면 +1
 
   // 1. 페이징 개수
   let pagingCount = Math.floor(totalCount.current / unitSize);
@@ -839,7 +826,6 @@ const PagingList = ({ totalCount, unitSize, pageNum, setPageNum, pgPgNum, pgPgSi
   if (totalCount.current % unitSize > 0) {
     pagingCount++;
   }
-  // console.log("페이징개수:", pagingCount, "나머지개수:", totalCount.current % unitSize);
 
   let pgPgCount = Math.floor(pagingCount / pgPgSize);
 
@@ -987,9 +973,7 @@ const PagingList = ({ totalCount, unitSize, pageNum, setPageNum, pgPgNum, pgPgSi
     pgPgNum.current = newPgPgNum;
 
     // 3. 새로운 페이지의 페이징 구역의 페이지 번호 업데이트하기
-    // 첫번째 페이지번호 업데이트하기
-    // -> 항상 이전 블록 수의 마지막 번호 +1이 다음 페이지 첫번호
-    // 이동할 페이지 번호
+
     let landingPage = (pgPgNum.current - 1) * pgPgSize + 1;
     console.log("도착페이지번호:", landingPage);
     // 페이지번호 상태변수 업데이트로 전체 리랜더링
@@ -1007,8 +991,6 @@ const PagingList = ({ totalCount, unitSize, pageNum, setPageNum, pgPgNum, pgPgSi
 
 // 업로드 모듈을 리턴하는 서브컴포넌트 ////////
 const AttachBox = ({ saveFile }) => {
-  // saveFile 프롭스펑션다운!
-  // [상태관리변수] //////////////
   // 1.드래그 또는 파일을 첨부할때 활성화 여부관리 변수
   // 값: true 이면 활성화, false이면 비활성화
   const [isOn, setIsOn] = useState(false);
@@ -1019,7 +1001,7 @@ const AttachBox = ({ saveFile }) => {
   // 드래그 대상영역을 들어가고 나갈때 isOn 상태값 업데이트하기
   const controlDragEnter = () => setIsOn(true);
   const controlDragLeave = () => setIsOn(false);
-  // 드래그를 할때 dragOver 이벤트는 비활성화함!(필요가 없어서!)
+  // 드래그를 할때 dragOver 이벤트는 비활성화
   const controlDragOver = (e) => e.preventDefault();
 
   // 드롭이벤트 발생시 처리 메서드

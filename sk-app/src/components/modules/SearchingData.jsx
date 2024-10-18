@@ -35,7 +35,7 @@ function SearchingData({ dt }) {
                       ? "/"
                       : "/detail"
                   }
-                  /* state로 3가지 값을 넘겨준다! */
+                  /* state로 3가지 값을 넘겨줌 */
                   state={v}
                 >
                  <img
